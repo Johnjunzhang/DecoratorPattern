@@ -1,14 +1,17 @@
 ﻿namespace DecoratorPattern
 {
-    public class MilkDecorator : Espresso
+    public class MilkDecorator : Beverage
     {
+        private Espresso espresso;
+
         public MilkDecorator(bool mocha) : base(mocha)
         {
+            espresso = new Espresso(mocha);
         }
 
         public override double Cost()
         {
-            return base.Cost() + 1.0;
+            return espresso.Cost() + 1.0;
         }
     }
 }

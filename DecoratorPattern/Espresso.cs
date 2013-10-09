@@ -2,7 +2,7 @@
 {
     public class Espresso : Beverage
     {
-        public static Espresso CreateEspresso(bool milk, bool mocha)
+        public static Beverage CreateEspresso(bool milk, bool mocha)
         {
             if (milk)
             {
@@ -11,7 +11,7 @@
             return new Espresso(mocha);
         }
 
-        protected Espresso(bool mocha)
+        public Espresso(bool mocha)
             : base(mocha)
         {
         }
