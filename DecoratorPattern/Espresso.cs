@@ -2,7 +2,16 @@
 {
     public class Espresso : Beverage
     {
-        public Espresso(bool mocha)
+        public static Espresso CreateEspresso(bool mocha)
+        {
+            if (mocha)
+            {
+                return new MochaDecorator(mocha);
+            }
+            return new Espresso(mocha);
+        }
+
+        protected Espresso(bool mocha)
             : base(mocha)
         {
         }
@@ -16,7 +25,7 @@
         {
             var condimentCost = 4.00;
 
-            if (Mocha)
+            if (GetMocha())
             {
                 condimentCost = condimentCost + 3.0;
             }

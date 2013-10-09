@@ -49,6 +49,7 @@
     <Compile Include="Beverage.cs" />
     <Compile Include="Espresso.cs" />
     <Compile Include="MilkDecorator.cs" />
+    <Compile Include="MochaDecorator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

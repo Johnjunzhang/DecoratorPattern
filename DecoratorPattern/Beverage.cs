@@ -2,11 +2,21 @@
 {
     public abstract class Beverage
     {
-        public bool Mocha { get; private set; }
+        private bool mocha;
+
+        public void SetMocha(bool value)
+        {
+            mocha = value;
+        }
+
+        public virtual bool GetMocha()
+        {
+            return mocha;
+        }
 
         protected Beverage(bool mocha)
         {
-            Mocha = mocha;
+            SetMocha(mocha);
         }
 
         public virtual string GetDescription()
