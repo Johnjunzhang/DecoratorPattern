@@ -6,13 +6,13 @@
         {
             if (milk)
             {
-                return new MilkDecorator(milk,mocha);
+                return new MilkDecorator(mocha);
             }
-            return new Espresso(milk, mocha);
+            return new Espresso(mocha);
         }
 
-        protected Espresso(bool milk, bool mocha)
-            : base(milk,mocha)
+        protected Espresso(bool mocha)
+            : base(mocha)
         {
         }
 
@@ -24,11 +24,6 @@
         public override double Cost()
         {
             var condimentCost = 4.00;
-
-            if (GetMilk())
-            {
-                condimentCost = condimentCost + 1.0;
-            }
 
             if (Mocha)
             {

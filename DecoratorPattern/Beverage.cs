@@ -2,23 +2,10 @@
 {
     public abstract class Beverage
     {
-        private bool milk;
-
-        public void SetMilk(bool value)
-        {
-            milk = value;
-        }
-
-        public virtual bool GetMilk()
-        {
-            return milk;
-        }
-
         public bool Mocha { get; private set; }
 
-        protected Beverage(bool milk, bool mocha)
+        protected Beverage(bool mocha)
         {
-            SetMilk(milk);
             Mocha = mocha;
         }
 
