@@ -2,9 +2,14 @@
 {
     public class Espresso : Beverage
     {
-        public Espresso(bool milk, bool soy, bool mocha)
-            : base(milk, soy, mocha)
+        public Espresso(bool milk, bool mocha)
+            : base(milk,mocha)
         {
+        }
+
+        public override string GetDescription()
+        {
+            return "Espresso";
         }
 
         public override double Cost()
@@ -15,10 +20,7 @@
             {
                 condimentCost = condimentCost + 1.0;
             }
-            if (Soy)
-            {
-                condimentCost = condimentCost + 2.0;
-            }
+
             if (Mocha)
             {
                 condimentCost = condimentCost + 3.0;

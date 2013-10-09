@@ -8,7 +8,7 @@ namespace DecoratorPatternTest
         [Fact]
         public void should_pay_1_when_buy_espresso()
         {
-           var espresso = new Espresso(false,false,false);
+           var espresso = new Espresso(false,false);
 
            Assert.Equal(4.0, espresso.Cost());
         }
@@ -16,25 +16,33 @@ namespace DecoratorPatternTest
         [Fact]
         public void should_pay_5_when_buy_espresso_with_milk()
         {
-            var espresso = new Espresso(true,false,false);
+            var espresso = new Espresso(true,false);
 
             Assert.Equal(5.0, espresso.Cost());
         }
 
         [Fact]
-        public void should_pay_9_when_buy_espresso_with_soy_and_mocha()
+        public void should_pay_7_when_buy_espresso_with_mocha()
         {
-            var espresso = new Espresso(false, true, true);
+            var espresso = new Espresso(false, true);
 
-            Assert.Equal(9.0, espresso.Cost());
+            Assert.Equal(7.0, espresso.Cost());
         }
 
         [Fact]
-        public void should_pay_10_when_buy_espresso_with_milk_soy_mocha_and_whip()
+        public void should_pay_8_when_buy_espresso_with_milk_and_mocha()
         {
-           var espresso = new Espresso(true,true,true);
-       
-           Assert.Equal(10.0,espresso.Cost());
+            var espresso = new Espresso(true, true);
+
+            Assert.Equal(8.0, espresso.Cost());
+        }
+
+        [Fact]
+        public void should_return_espresso_when_get_espresso_description()
+        {
+            var espresso = new Espresso(false, false);
+
+            Assert.Equal("Espresso", espresso.GetDescription());
         }
     }
 }
