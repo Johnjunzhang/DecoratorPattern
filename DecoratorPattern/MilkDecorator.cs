@@ -4,9 +4,9 @@
     {
         private Espresso espresso;
 
-        public MilkDecorator(bool mocha) : base(mocha)
+        public MilkDecorator(bool mocha, Espresso espresso1) : base(mocha)
         {
-            espresso = new Espresso(mocha);
+            espresso = espresso1;
         }
 
         public override double Cost()

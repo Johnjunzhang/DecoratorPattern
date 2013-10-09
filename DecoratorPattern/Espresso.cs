@@ -2,15 +2,6 @@
 {
     public class Espresso : Beverage
     {
-        public static Beverage CreateEspresso(bool milk, bool mocha)
-        {
-            if (milk)
-            {
-                return new MilkDecorator(mocha);
-            }
-            return new Espresso(mocha);
-        }
-
         public Espresso(bool mocha)
             : base(mocha)
         {
