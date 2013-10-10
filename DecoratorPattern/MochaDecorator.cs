@@ -4,9 +4,9 @@
     {
         private Espresso espresso;
 
-        public MochaDecorator()
+        public MochaDecorator(Espresso espresso1)
         {
-            espresso = new Espresso();
+            espresso = espresso1;
         }
 
         public override double Cost()
