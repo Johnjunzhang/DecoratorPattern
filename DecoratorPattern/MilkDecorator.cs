@@ -2,9 +2,9 @@
 {
     public class MilkDecorator : Beverage
     {
-        private Espresso espresso;
+        private Beverage espresso;
 
-        public MilkDecorator(Espresso espresso1)
+        public MilkDecorator(Beverage espresso1)
         {
             espresso = espresso1;
         }
