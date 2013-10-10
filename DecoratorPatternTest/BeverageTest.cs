@@ -16,7 +16,7 @@ namespace DecoratorPatternTest
         [Fact]
         public void should_pay_5_when_buy_espresso_with_milk()
         {
-            var espresso = (Beverage) new MilkDecorator(false, Espresso.CreateEspresso(false));
+            var espresso = (Beverage) new MilkDecorator(Espresso.CreateEspresso(false));
 
             Assert.Equal(5.0, espresso.Cost());
         }
@@ -32,7 +32,7 @@ namespace DecoratorPatternTest
         [Fact]
         public void should_pay_8_when_buy_espresso_with_milk_and_mocha()
         {
-            var espresso = (Beverage) new MilkDecorator(true, Espresso.CreateEspresso(true));
+            var espresso = (Beverage) new MilkDecorator(Espresso.CreateEspresso(true));
 
             Assert.Equal(8.0, espresso.Cost());
         }

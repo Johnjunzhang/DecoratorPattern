@@ -6,13 +6,12 @@
         {
             if (mocha)
             {
-                return new MochaDecorator(mocha);
+                return new MochaDecorator();
             }
-            return new Espresso(mocha);
+            return new Espresso();
         }
 
-        protected Espresso(bool mocha)
-            : base(mocha)
+        protected Espresso()
         {
         }
 
@@ -23,14 +22,7 @@
 
         public override double Cost()
         {
-            var condimentCost = 4.00;
-
-            if (GetMocha())
-            {
-                condimentCost = condimentCost + 3.0;
-            }
-
-            return condimentCost;
+            return 4.00;
         }
     }
 }

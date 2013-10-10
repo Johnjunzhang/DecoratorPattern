@@ -2,13 +2,17 @@
 {
     public class MochaDecorator:Espresso
     {
-        public MochaDecorator(bool mocha) : base(mocha)
+        public MochaDecorator()
         {
         }
 
-        public override bool GetMocha()
+        public override double Cost()
         {
-            return true;
+            var condimentCost = 4.00;
+
+            condimentCost = condimentCost + 3.0;
+            
+            return condimentCost;
         }
     }
 }

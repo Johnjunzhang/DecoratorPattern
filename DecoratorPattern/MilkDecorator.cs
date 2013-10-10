@@ -4,7 +4,7 @@
     {
         private Espresso espresso;
 
-        public MilkDecorator(bool mocha, Espresso espresso1) : base(mocha)
+        public MilkDecorator(Espresso espresso1)
         {
             espresso = espresso1;
         }
